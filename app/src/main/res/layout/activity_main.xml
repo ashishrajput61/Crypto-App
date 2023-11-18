@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:id="@+id/fragmentContainerView"
+        app:navGraph="@navigation/nav_xml"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        android:layout_above="@id/smooth_bottombar"
+        android:layout_height="match_parent">
+    </androidx.fragment.app.FragmentContainerView>
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:layout_width="match_parent"
+        android:id="@+id/smooth_bottombar"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_bar"
+        android:elevation="10dp"
+        app:iconMargin="6dp"
+        app:backgroundColor="@color/dark_blue"
+        app:itemFontFamily="@font/nunito_meduim_font"
+        app:iconSize="20dp"
+        app:indicatorRadius="8dp"
+        app:textSize="12sp"
+        android:layout_height="56dp">
+    </me.ibrahimsn.lib.SmoothBottomBar>
+</RelativeLayout>
